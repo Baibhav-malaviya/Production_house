@@ -309,7 +309,6 @@ header .logo span{
     width: inherit;
     overflow: hidden;
     z-index: 2;
-    /* transform: rotate(30deg); */
     opacity: .6;
     border-radius: inherit;
 }
