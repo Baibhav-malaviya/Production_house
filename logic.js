@@ -31,16 +31,16 @@ function closse(){
 
 
 //! ==============js code for changing the header bgcolor on scrolling==========
-window.addEventListener("scroll", function(event){
+// window.addEventListener("scroll", function(event){
     
-    let scroll = this.scrollY;
-   if(scroll > 1){
-         document.getElementById("header").classList.add("header-bg");
-   }
-   else{
-    document.getElementById("header").classList.remove("header-bg");
-   }
-});
+//     let scroll = this.scrollY;
+//    if(scroll > 1){
+//          document.getElementById("header").classList.add("header-bg");
+//    }
+//    else{
+//     document.getElementById("header").classList.remove("header-bg");
+//    }
+// });
 
 //this function is for removing the rotateIn animation after one performance(that is 1s)
 function rotateIn(){

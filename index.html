@@ -8,40 +8,30 @@
     <meta http-equiv="refresh" content="5000" />
     <!-- Refresh the page in every 5 secs-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/MPlogo.png">
     <script
       src="https://kit.fontawesome.com/528dc25378.js"
       crossorigin="anonymous"
     ></script>
-    <title>$ Malviya Production</title>
+    <title> Malviya Production</title>
   </head>
 
   <header id="header">
-    <div class="logo"><h1>Malaviya </h1><span><h1> Production</h1></span></div>
+    <div class="logo">
+      <h1>Malaviya</h1>
+      <span><h1>Production</h1></span>
+    </div>
     <div id="hidden" class="container">
       <ul>
-        <!--Bootstrap-icons  code is going here-->
-
-        <!--Bootstrap-icons  code is going here-->
-
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li>
           <a href="#server"
             >Services
-            <i style="margin: 4px 0 0 4px" class="fa-solid fa-angle-down"></i
-          ></a>
-          <!-- <ul>
-              <li><a href="#">Web</a></li>
-              <li>
-                <a href="#">Video</a>
-                <ul>
-                  <li><a href="#">Reel</a></li>
-                  <li><a href="#">Youtube</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Game</a></li>
-            </ul> -->
+            <i style="margin: 4px 0 0 4px" class="fa-solid fa-angle-down"></i>
+          </a>
         </li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -59,8 +49,8 @@
     <div id="bholu" class="bholu">
       <div class="left">
         <div class="top">
-          <span>Hey There, </span>
-         <h1> I'm Gautam Malaviya</h1>
+          <div class="greeting">Hey There, </div>
+          <h1>I'm Gautam Malaviya</h1>
         </div>
         <div class="middle">
           <p>
@@ -75,18 +65,127 @@
             skill.
           </p>
         </div>
-        <span style="color: black">___more about me</span>
+        
         <div class="bottom2">
           <p>Helping content creator and brand with post-production process</p>
         </div>
       </div>
       <div class="right">
         <!-- <div class="hex"></div>   it is in comment because we do not need hexagon anymore but its css is still written.-->
-        <div><img src="production_house.jpg" alt="" /></div>
+        <div><img src="/production_house.svg" alt="" /></div>
       </div>
     </div>
+    <!-- <div class="main slider">
+      <div class="top">
+        <div class="background">
+          <img src="/gautamProfile.jpg" alt="">
+        </div>
+      </div>
+      <div class="bottom"></div>
+    </div> -->
+
+
+
+
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30" loop="true"
+    slides-per-view="3" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false" scrollbar="false" allowTouchMove="true">
+    
+  <!-- <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30" loop="true"> -->
+    <swiper-slide>
+        <div class="slider">
+        <div class="top">
+          <div class="background">
+            <img src="/house1.jpg" alt="">
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slider">
+        <div class="top">
+          <div class="background">
+            <img src="/house2.jpg" alt="">
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slider">
+        <div class="top">
+          <div class="background">
+            <img src="/house3.jpg" alt="">
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slider">
+        <div class="top">
+          <div class="background">
+            <img src="/house4.jpg" alt="">
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slider">
+        <div class="top">
+          <div class="background">
+            <img src="/house5.jpg" alt="">
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slider">
+        <div class="top">
+          <div class="background">
+            <img src="/house6.jpg" alt="">
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slider">
+        <div class="top">
+          <div class="background">
+            <img src="/house7.jpg" alt="">
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slider">
+        <div class="top">
+          <div class="background">
+            <img src="/house8.jpg" alt="">
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slider">
+        <div class="top">
+          <div class="background">
+            <img src="/house5.jpg" alt="">
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </swiper-slide>
+   
+  </swiper-container>
+    
     <!-- made the slider of some work on videos -->
-    <div class="horizontal-slider">
+    <!-- <div class="horizontal-slider">
       <div>
         <img src="" alt="" />
         <img src="" alt="" />
@@ -96,14 +195,14 @@
         <img src="" alt="" />
         <img src="" alt="" />
       </div>
-      <!-- div for prev and next buttons -->
+      
       <div>
         <div><i class="fa-solid fa-chevron-left fa-3x"></i></div>
       </div>
       <div>
         <div><i class="fa-solid fa-chevron-right fa-3x"></i></div>
       </div>
-    </div>
+    </div> -->
 
     <!-- here we make the some card -->
     <div id="blur1" class="body">
@@ -203,9 +302,9 @@
 
   <footer>
     <div class="left">
-      <a href=""><i class="fa-brands fa-instagram fa-5x"></i></a>
-      <a href=""><i class="fa-brands fa-square-facebook fa-5x"></i></a>
-      <a href=""><i class="fa-brands fa-linkedin fa-5x"></i></a>
+      <a href=""><i class="fa-brands fa-instagram fa-3x"></i></a>
+      <a href=""><i id="middleIcon" class="fa-brands fa-square-facebook fa-3x"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin fa-3x"></i></a>
     </div>
     <div class="right">
       <div>
@@ -220,5 +319,30 @@
       </div>
     </div>
   </footer>
-  <script src="logic.js"></script>
+  <script>
+    const swiperEl = document.querySelector('swiper-container')
+    Object.assign(swiperEl, {
+      // slidesPerView: 1,
+      // pagination: {
+      //   clickable: true,
+      // },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        520: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
+    swiperEl.initialize();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  <script src="/logic.js"></script>
 </html>
