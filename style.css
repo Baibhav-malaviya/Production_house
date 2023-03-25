@@ -999,7 +999,7 @@ footer .right div:nth-child(2){
         font-family: 'Times New Roman', Times, serif;
         padding:10px;
         padding-bottom: 0;
-        line-height: 22px;
+        line-height: 20px;
     }
 }
  @media(max-width:270px)  {
