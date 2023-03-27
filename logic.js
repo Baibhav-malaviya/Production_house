@@ -64,10 +64,10 @@ function goDarkMode() {
 
     //For changing the image (production_house) on going the dark mode
     let production_house_image = document.querySelector("#production_house_image");
-    if(production_house_image.getAttribute("src") == "/production_house.svg"){
-        production_house_image.setAttribute("src", "/production_houseD.svg");
+    if(production_house_image.getAttribute("src") == "production_house.svg"){
+        production_house_image.setAttribute("src", "production_houseD.svg");
     }else{
-        production_house_image.setAttribute("src", "/production_house.svg");
+        production_house_image.setAttribute("src", "production_house.svg");
     }
    
     // document.getElementById("header").classList.toggle("goDark");
