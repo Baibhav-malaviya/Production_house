@@ -36,12 +36,17 @@ body *{
 /*!================================header styling with drop down menu=========================*/
 :root{
     --primary-color:rgba(245,245,245,1);
+    /* --primary-colorD:black; */
+    --primary-colorD:#03001C;
     --primary-color2:#DDF7E3;
     --secondary-color:	rgb(44, 116, 179);
-    --secondary-color-hover:	rgb(44, 116, 179,8);
+    --secondary-colorD:;
+    --secondary-color-hover:rgb(44, 116, 179,.5);
     --secondary-color2:rgb(247, 192, 74);
-    --secondary-color2-hover:	rgb(244, 185, 67,.8);
+    --secondary-color2D:#8b8b8d;
+    --secondary-color2-hover:	rgb(244, 185, 67,.5);
     --clr-black:black;
+    --clr-blackD:#8b8b8d;
     --clr-white:white;
     --primary-text-font-family:Arial, Helvetica, sans-serif;
 }
@@ -61,6 +66,7 @@ header{
     width: 100%;
     position:sticky;
     top: 0;
+    align-items: center;
     justify-content: space-between;
     font-family: var(--primary-text-font-family);
     font-size: 1.2rem;
@@ -69,9 +75,45 @@ header{
     border-bottom: 1px solid var(--clr-black);
     z-index: 99999;
 }
+.goDark{
+    background-color: var(--primary-colorD);
+}
 
 /* .head class is added by js in the body tag*/
 
+header .dark{
+    display: inline-block;
+    height: 25px;
+    width: 50px;
+    border-radius: 25px;
+    padding: 0 2px;
+    border: 2px solid var(--secondary-color2);
+}
+.goDark .dark{
+    border: 2px solid var(--secondary-color2D);
+}
+header .dark .circle{
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    background-color: var(--secondary-color2);
+    border: 3px solid var(--primary-color);
+    cursor: pointer;
+    transition: all .5s;
+}
+header .dark .circle::before{
+    height: 21px;
+    width: 21px;
+    background-color: green;
+    transform: translateX(5px);
+}
+.goDark .dark .circle{
+    background-color: var(--secondary-color2D);
+    border: 3px solid var(--primary-colorD);
+}
+.goDark .dark .circle{
+    transform: translateX(20px);
+}
 
 header .logo{
     display: flex;
@@ -81,7 +123,6 @@ header .logo{
     padding:auto 1rem;
     color: var(--secondary-color);
     font-size:1.7rem;
-    /* font-weight:900; */
     font-family: 'Itim', cursive; 
 }
 header .logo span{
@@ -118,7 +159,7 @@ header .logo span{
     display: flex;
 }
 .container>ul>li{
-    width: 12.5vw ;
+    width: 10.5vw ;
     background-color: transparent;
   
 }
@@ -134,77 +175,53 @@ header .logo span{
     justify-content: center;
     height: inherit;
     width: inherit;
-    font-size: 16px;
     font-weight:700;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--clr-black);
+}
+.goDark .container ul li a{
+    color: var(--clr-blackD);
 }
 .container ul li a:is(:hover,:focus,:active){
     background-color: var(--secondary-color-hover);
     border-bottom: 5px solid var(--secondary-color);
 }
-/* @keyframes bgInOut{
-    from{
-        border-bottom-width: 0px;
-    }
-    to{
-        border-bottom-width: 100px;
-    }
-} */
-/* .container>ul>li>a:is(:focus,:active){
-    border-bottom: 5px solid  var(--secondary-color);
+.container ul li:last-child a:is(:hover,:focus,:active){
+    background-color: transparent;
+    border-bottom: none;
+    cursor: auto;
 }
-.container>ul ul>li>a:is(:focus,:active){
-    border-left: 5px solid  var(--secondary-color);
-} */
-
-/* .container ul ul{
-    position: absolute;
-    display:none;
-    width: auto;
-    right: 16vw;
-    margin:0 auto;
-    background-color: var(--primary-color2);
-}
-.container ul ul ul{
-    position: relative;
-    bottom: 4rem;
-    right: 8rem;
-    
-}
-
-.container ul li:hover>ul{
-    display: block;  
-}
-.container ul li>a:hover{
-  color: black;
-} */
-
-
 /**=============================Ending of dropdown menu====================================================================================*/
+
+
+
+
+
+/**============================= BODY ====================================================================================*/
+
+
+
+
 
 
 /*?=============================Hamburger Menu ========================================================================================*/
 
+
 .burger{
     position: absolute;
     right: 2rem;
-    top: 1.5rem;
     cursor: pointer;
     display: none;
-    background:var(--primary-color);
-    padding: .6rem;
-   
-
 }
 .slices{
-    
     width: 28px;
     height: 4px;
     border-radius: 2px;
     background-color: var(--secondary-color2);
     z-index: 1000;
-    
+}
+.goDark .slices{
+    background-color: var(--secondary-color2D);
 }
 #slice1{
     transform: translateY(-4px);
@@ -235,9 +252,7 @@ header .logo span{
 
 /*!===========================Bholu=========================================================================================*/
 .bholu{
-    /* height: 100vh; */
     width: inherit;
-    /* margin-top: 4rem; */
     display: flex;
 }
 .bholu *{
@@ -247,11 +262,14 @@ header .logo span{
     /* outline: blue solid 2px; */
 }
 .bholu p{
-    line-height: 28px;
-    font-size: 18px;
+    line-height: 1.8rem;
+    font-size: 1.35rem;
     font-weight:100;
     font-family: 'Maven Pro', sans-serif;
     color: var(--clr-black);
+}
+.goDark .bholu p{
+    color: var(--clr-blackD);
 }
 
 .bholu div{
@@ -265,15 +283,12 @@ header .logo span{
     height: 25vw;
     width: 14.45vw;
     position: relative;
-    
-    /* box-shadow: 1px 0px 5px 1px white; */
 }
 .bholu .right div{
     position: relative;
     height: 60vw;
     width: 60vw; 
     border-radius: 5px;
-    /* box-shadow: 0px 4px 8px -2px var(--secondary-color); */
 }
 .rotate_ .right div{
     display: flex;
@@ -286,8 +301,6 @@ header .logo span{
 @keyframes rotateIn{
     0%{transform: translate(1000px) rotate(60deg);}
     50%{transform: translate(1000px) rotate(60deg);}
-    /* 50%{transform: translate(-30px) rotate(-5deg);}
-    100%{transform: translate(30px) rotate(5deg);} */
 }
 .bholu .right div img{
     height: inherit;
@@ -327,9 +340,6 @@ header .logo span{
     align-items:center;
     justify-content:center;
     flex-direction: column;
-    /* padding: 5rem 0; */
-    /* gap: 1rem; */
-    
 }
 .bholu .left div{
     width: 80%;
@@ -343,7 +353,7 @@ header .logo span{
 .bholu .left div:first-child{
     
     width: 80%;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight:900;
     font-family: 'Poppins', sans-serif;
     letter-spacing: .3rem;
@@ -353,6 +363,9 @@ header .logo span{
     align-items: center;
     color: var(--secondary-color2); 
     padding: 0;
+}
+.goDark .bholu .left div:first-child{
+    color: var(--secondary-color2D) ;
 }
 .bholu .left div:first-child h1{
     margin: 2rem 0;
@@ -382,6 +395,11 @@ header .logo span{
     background-color: var(--clr-white);
     padding: 0 3vw;
 }
+.goDark .bholu .left div:last-child{
+    border: 1px solid var(--primary-colorD);
+    background-color: var(--primary-colorD);
+    color: var(--clr-black);
+}
 /*?==========================HORIZONTALSLIDER===================================================================================*/
 /*!===========================InnerCard=========================================*/
 swiper-slide .slider{
@@ -392,6 +410,9 @@ swiper-slide .slider{
     width: 100%;  
     background-color: #fff;
     
+}
+.goDark swiper-slide .slider{
+    background-color: var(--secondary-color2D);
 }
 @keyframes rotatefit1{
     0%,50%,100%{
@@ -429,22 +450,29 @@ swiper-slide .slider{
     width: 90%;
     height: 70%;
     margin: 0px auto;
-    background-color: #fff;
+    background-color: var(--clr-white);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
    z-index: 1;
    transform: rotate(-4deg);
    overflow: visible;
    transition: all .35s;
 }
+.goDark .slider .top{
+    background-color: var(--secondary-color2D);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+}
 .slider .top .background{
     position: absolute;
-    /* margin: 20px auto; */
     height:100%;
     width: 100%;
-    background-color: white;
+    background-color: var(--clr-white);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     transform: rotate(3deg);
     overflow: visible;
+}
+.goDark .slider .top .background{
+    background-color:var(--secondary-color2D);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
 }
 .slider .top .background img{
     height: inherit;
@@ -464,6 +492,9 @@ swiper-container {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .goDark  swiper-slide{
+    background: var(--clr-black);
   }
 
   swiper-slide img {
@@ -544,8 +575,10 @@ swiper-container {
     display: flex; 
     align-items: center;
     justify-content: space-around;
-    background-color: #fff;
-
+    background-color: var(--clr-white);
+}
+.goDark .server{
+    background:var(--primary-colorD);
 }
 .server div:not(.server div:nth-child(4),.server div:nth-child(5)){
     position: absolute;
@@ -554,6 +587,9 @@ swiper-container {
     border-radius: 5px;
     border: 2px var(--secondary-color) solid;
     background:var(--primary-color);
+}
+.goDark .server div:not(.server div:nth-child(4),.server div:nth-child(5)){
+    background:var(--secondary-color2D);
 }
 .server div:first-child{
     background-color: green;
@@ -623,7 +659,6 @@ todo====================================HEXAGON=================================
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    /* margin-top: 4rem; */
     padding-top: 120px;
     padding-bottom: 30px;
     z-index: -9;
@@ -638,7 +673,6 @@ todo====================================HEXAGON=================================
 }
 .card{
     width: 300px; 
-    background-color: #95BDFF;
     height: 430px;
     margin: 15px 8px;
     border-radius: 15px;
@@ -647,7 +681,10 @@ todo====================================HEXAGON=================================
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: .2s;
+    transition: all .2s;
+}
+.goDark .card{
+    border: 3px solid var(--clr-black);
 }
 .card:hover{
     transform: scale(1.1);
@@ -657,8 +694,11 @@ todo====================================HEXAGON=================================
 .card .top{
     height: 50%;
     width: 100%;
-    background: #13005A;
+    background: var(--secondary-color);
     border-radius: 15px 15px 0 0 ;
+}
+.goDark .card .top{
+    background:var(--secondary-color2D);
 }
 
 .card .top div{
@@ -668,10 +708,14 @@ todo====================================HEXAGON=================================
     height: 100%;
     width: 100%;
     background-color: var(--secondary-color);
-    /* visibility: hidden; */
     border-radius: 15px 15px 75px 0;
+    
 }
+.goDark .card .top div{
+    /* background-color: var(--clr-white); */
+    background-color: #2C3333;
 
+}
 .card .middle{
     height: 160px;
     width: 160px;
@@ -688,6 +732,9 @@ todo====================================HEXAGON=================================
     border: 3px solid var(--secondary-color);
     border-bottom: 0;
     scale: 1.1;
+}
+.goDark .card:hover .middle{
+    border-color: #2C3333;
 }
 .card:hover .top p{
     transform: translateY(65px);
@@ -721,6 +768,9 @@ todo====================================HEXAGON=================================
     border-radius: 10px;
     cursor: pointer;
 }
+.goDark .card .bottom button{
+    background-color: #2C3333;
+}
 .card .bottom button:hover{
     background-color: var(--secondary-color2-hover);
 }
@@ -731,11 +781,18 @@ todo====================================HEXAGON=================================
     border-radius: 0 0 1rem 1rem;
     
 }
+.goDark .card .bottom{
+    /* background:var(--clr-white); */
+    background-color: #2C3333;
+}
 .card .bottom>div{
     height: 100%;
     width: 100%;
     background-color: #13005A;
     border-radius: 5rem 0 1rem 1rem;
+}
+.goDark .card .bottom>div{
+    background-color: var(--secondary-color2D);
 }
 .card .bottom div{
     color: white;
@@ -804,6 +861,9 @@ footer{
     flex-direction: row;
     width: 100%;
     background-color: var(--secondary-color2);
+}
+.goDark footer{
+    background:var(--secondary-color2D);
 }
 footer div{
     width: 50%;
@@ -924,10 +984,17 @@ footer .right div:nth-child(2){
         top: -5rem;
         left: 0;
         width: 45vw;
-        height: auto;
+        height: 460px;
         display: none;
         background:var(--primary-color);
         color: black;
+        transition:all .3s;
+    }
+    .goDark .container{
+        background-color: var(--primary-colorD);
+    }
+    .goDark .slices{
+        background-color: var(--secondary-color2);
     }
     .show{
         display: block;
@@ -940,8 +1007,7 @@ footer .right div:nth-child(2){
         flex-direction: column;
         justify-content: left;
         margin: 0;
-        /* margin-top: 5rem ; */
-        padding: 5rem 0;
+        margin-top: 5rem;
         text-align: left;
     }
     
@@ -978,28 +1044,13 @@ footer .right div:nth-child(2){
     }
 
 }
-@media(max-width:400px){
+@media(max-width:380px){
     html{
-        font-size: 8px;
-    }
-    .bholu .left p{
-        font-size: 14px;
-        line-height: 24px;
+        
     }
     header .logo{
         margin-left: 9px;
-        font-size: 14px;
-    }
-
-    .card .bottom p{
-        text-align: justify;
-        font-size: 15px;
-        /* font-size: medium;
-        font-weight: normal; */
-        font-family: 'Times New Roman', Times, serif;
-        padding:10px;
-        padding-bottom: 0;
-        line-height: 20px;
+        font-size: small;
     }
 }
  @media(max-width:270px)  {
@@ -1008,12 +1059,5 @@ footer .right div:nth-child(2){
     }
     header .logo{
         margin-left: 7.5px;
-    }
-    .container ul ul{
-        left: 16rem;
-    }
-    .container ul ul ul{
-        left: 5rem;
-        
     }
  }

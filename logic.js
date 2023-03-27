@@ -52,5 +52,30 @@ function rotateIn(){
 
 }
 
+//! =========================Function for dark mode==============================
+function goDarkMode() {
+    let circle = document.getElementsByClassName("circle");
+    let header =document.querySelector("#header");
+    header.style.transition="background-color 0.3s ease-in";
+    header.classList.toggle("goDark");
+    let body = document.querySelector("body");
+    body.classList.toggle("goDark");
+    body.style.transition=" background-color 0.3s ease-in";
+
+    //For changing the image (production_house) on going the dark mode
+    let production_house_image = document.querySelector("#production_house_image");
+    if(production_house_image.getAttribute("src") == "/production_house.svg"){
+        production_house_image.setAttribute("src", "/production_houseD.svg");
+    }else{
+        production_house_image.setAttribute("src", "/production_house.svg");
+    }
+   
+    // document.getElementById("header").classList.toggle("goDark");
+    // let _header = document.querySelector("#header");
+    // _header.classList.toggle("goDark");
+    // console.log(_header);
+}
+
+
 
 
