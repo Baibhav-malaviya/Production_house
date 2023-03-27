@@ -89,6 +89,9 @@ header .dark{
     padding: 0 2px;
     border: 2px solid var(--secondary-color2);
 }
+header .dark:hover{
+    cursor: pointer;
+}
 .goDark .dark{
     border: 2px solid var(--secondary-color2D);
 }
@@ -100,12 +103,6 @@ header .dark .circle{
     border: 3px solid var(--primary-color);
     cursor: pointer;
     transition: all .5s;
-}
-header .dark .circle::before{
-    height: 21px;
-    width: 21px;
-    background-color: green;
-    transform: translateX(5px);
 }
 .goDark .dark .circle{
     background-color: var(--secondary-color2D);
