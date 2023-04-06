@@ -35,19 +35,21 @@ body *{
 
 /*!================================header styling with drop down menu=========================*/
 :root{
-    --primary-color:rgba(245,245,245,1);
+    --primary-hue:200;
+    --secondary2-hue:40;
+    --primary-color:hsl(0, 0%, 96%);
     /* --primary-colorD:black; */
-    --primary-colorD:#03001C;
-    --primary-color2:#DDF7E3;
-    --secondary-color:	rgb(44, 116, 179);
+    --primary-colorD:hsl(246, 100%, 5%);
+    --primary-color2:hsl(134, 62%, 92%);
+    --secondary-color:	hsl(var(--primary-hue), 61%, 44%);
     --secondary-colorD:;
-    --secondary-color-hover:rgb(44, 116, 179,.5);
-    --secondary-color2:rgb(247, 192, 74);
-    --secondary-color2D:#8b8b8d;
-    --secondary-color2-hover:	rgb(244, 185, 67,.5);
-    --clr-black:black;
-    --clr-blackD:#8b8b8d;
-    --clr-white:white;
+    --secondary-color-hover:hsla(208, 61%, 44%, 0.5);
+    --secondary-color2:hsl(var(--secondary2-hue), 92%, 65%);
+    --secondary-color2D:hsl(240, 1%, 55%);
+    --secondary-color2-hover:	hsla(var(--secondary2-hue), 59%, 65%);
+    --clr-black:hsl(0, 0%, 0%);
+    --clr-blackD:hsl(240, 1%, 55%);
+    --clr-white:hsl(0, 0%, 100%);
     --primary-text-font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -583,7 +585,8 @@ swiper-container {
     height: 20rem;
     border-radius: 5px;
     border: 2px var(--secondary-color) solid;
-    background:var(--primary-color);
+    /* background:var(--primary-color); */
+    background: radial-gradient(at right top ,hsl(0, 0%, 100%) 40%,hsl(0, 0%, 75%));
 }
 .goDark .server div:not(.server div:nth-child(4),.server div:nth-child(5)){
     background:var(--secondary-color2D);
